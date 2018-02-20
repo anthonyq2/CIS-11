@@ -3,6 +3,9 @@
   The assembler converts source code programs from assembly language into machine language. The task of the linker is to combine the
   individual files created by the assembler into a single executable program.
 3. What is meant by one-to-many relationship when comparing a high-level language to machine language?
+  One to many means that the key words in high level languages translate to multiple words in assembly language.
+8. Do you suppose type checking on pointer variables is stronger (stricter) in assembly language, or in C an C++?
+  I think it's stricter in C and C++ because the data are often abstracted.
   
 
 - [ ] 1.2.1 Section Review, Questions 2, 3, 10
