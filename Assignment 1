@@ -45,4 +45,14 @@ written in language L0.
  b. B697C7A1 = 1011 0110 1001 0111 1100 0111 1010 0001
  c. 2B3D9461 = 0010 1011 0011 1101 1001 0100 0110 0001
 - [ ] 1.7.1 Short Answer, Questions 1-22 and 25
+1. In an 8-bit binary number, which is the most significant bit (MSB)?
+   It is the digit in the position that has the greatest value.
+2. What is the decimal representation of each of the following unsigned binary integers?
+ a. 00110101 = 53
+ b. 10010110 = 150
+ c. 11001100 = 204
+3. What is the sum of each pair of integers?
+ a. 10101111 + 11011011 = 100001011
+ b. 10010111 + 11111111 = 100010110
+ c. 01110101 + 10101100 = 100100001
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
