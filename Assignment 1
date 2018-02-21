@@ -31,6 +31,6 @@ written in language L0.
 3. What is the sum of each pair of binary integers?
  a. 00001111 + 00000010 = 00010001
  b. 11010101 + 01101011 = 101000000
- c. 00001111 + 00001111
+ c. 00001111 + 00001111 = 00011110
 - [ ] 1.7.1 Short Answer, Questions 1-22 and 25
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
