@@ -44,6 +44,7 @@ written in language L0.
  a. A4693FBC = 1010 0100 0110 1001 0011 1110 1011 1100
  b. B697C7A1 = 1011 0110 1001 0111 1100 0111 1010 0001
  c. 2B3D9461 = 0010 1011 0011 1101 1001 0100 0110 0001
+
 - [ ] 1.7.1 Short Answer, Questions 1-22 and 25
 1. In an 8-bit binary number, which is the most significant bit (MSB)?
    It is the digit in the position that has the greatest value.
@@ -95,11 +96,39 @@ written in language L0.
  a. 4CD2 = 19666
  b. 8230 = -32208
 15. What is the decimal representation of each of the following signed binary numbers?
- a. 10110101 =
- b. 00101010 =
- c. 11110000 =
+ a. 10110101 = -75
+ b. 00101010 = 42
+ c. 11110000 = -16
 16. What is the decimal representation of each of the following signed binary numbers?
- a. 10000000 =
- b. 11001100 =
- c. 10110111 =
+ a. 10000000 = -128
+ b. 11001100 = -52
+ c. 10110111 = -73
+17. What isthe 8-bit binary (two's compliment) representation of each of the following signed decimal integers?
+ a. -5 = 11111011
+ b. -42 = 11010110
+ c. -16 = 11110000
+18. What isthe 8-bit binary (two's compliment) representation of each of the following signed decimal integers?
+ a. -72 = 10111000
+ b. -98 = 10011110
+ c. -26 = 11100110
+19. What is the sum of each pair of hexadecimal integers?
+ a. 6B4 + 3FE = AB2
+ b. A49 + 6BD = 1106
+20. What is the sum of each pair of hexadecimal integers?
+ a. 7C4 + 3BE = B82
+ b. B69 + 7AD = 1316
+21. What are the hexadecimal and decimal representations of the ASCII character capital B?
+   Hex: 42
+   Dec: 66
+22. What are the hexadecimal and decimal representations of the ASCII character capital G?
+   Hex: 47
+   Dec: 71
+25. Create a truth table to show all possible inputs and outputs for the boolean function described by NOT(A OR B).
+
+   A   |   B  |   NOT(A OR B)
+   T   |   T  |      F
+   T   |   F  |      F 
+   F   |   T  |      F
+   F   |   F  |      T
+      
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
