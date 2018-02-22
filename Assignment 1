@@ -132,3 +132,25 @@ written in language L0.
    F   |   F  |      T
       
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
+1. Write a function that receives a string containing a 16-bit binary integer. The function must return the strings integer value.
+   
+   Using Java:
+
+public class Converter
+{
+   public static int binaryToDecimal(String bin){
+       double answer = 0;
+       int i = 0;
+       
+       while (i<bin.length() && !(bin.length() > 16)){    
+           
+           if(bin.charAt(i)=='1'){
+               answer = answer + Math.pow(2,bin.length()-1-i);
+           }
+           i++;
+       }
+       
+       return (int) answer;
+
+  }
+}
