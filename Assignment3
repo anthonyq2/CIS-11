@@ -1,10 +1,30 @@
 - [ ] 3.1.11 Section Review, Questions 1, 2, 3, 4
-1. Decimal: -35d. 
+1. Decimal: -35d
+   Hex: DDh
+   Oct: 335o
+   Bin: 11011101b
+2. No, there has to be a 0 in front.
+3. No, multiplication and division have equal precedence.
+4. 40 MOD (2 * 3) + (4 - 2)/3 = 5
 
 - [ ] 3.2.4 Section Review, Questions 4, 5
+4. The eax register holds the sum.
+5. INVOKE ExitProcess,0 is what halts the program.
+
 - [ ] 3.3.3 Section Review, Questions 1, 2, 3, 4
+1. The assembler produces an object file. It can also produce a listing file.
+2. True.
+3. True.
+4. The loader.
+
 - [ ] 3.4.13 Section Review, Questions 1, 2, 3, 4, 5
+1. var SWORD
+2. var BYTE
+3. var SBYTE
+4. var QWORD
+5. SDWORD
 - [ ] 3.5.5 Section Review Question 3
+3. 
 - [ ] 3.9.1 Short Answer, Questions 4, 5, 6, 25
 - [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
 - [ ] 3.10 Programming Exercises, Pick any 1 exercise
