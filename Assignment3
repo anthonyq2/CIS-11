@@ -29,6 +29,8 @@
 - [ ] 3.9.1 Short Answer, Questions 4, 5, 6, 25
 4. Assembler languague is not quite correct because the assembler is the actual program that translates assembly language 
 code into machine code.
-5. 
+5. Big endian is when the most significant bit is placed at the lowest address and little endian is when the least significant bit
+is placed at the lowest address. The terms come from a reference to a book by Jonathan titled Gulliver's Travels.
+6. 
 - [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
 - [ ] 3.10 Programming Exercises, Pick any 1 exercise
