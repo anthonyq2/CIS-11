@@ -35,5 +35,31 @@ is placed at the lowest address. The terms come from a reference to a book by Jo
 25. SDWORD.
 
 - [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
-4. 
+4. DWORD can be assigned a negative value, but it does not store that value at runtime. This shows that the assembler does not type check
+for negatives.
+7. array DWORD 120 DUP(?)
+13. testString BYTE 500 DUP("TEST")
+
 - [ ] 3.10 Programming Exercises, Pick any 1 exercise
+1. 
+ExitProcess proto
+.data
+sum1 qword 0
+sum2 qword 0
+.code
+main proc
+   mov  eax, 5
+   mov  ebx, 6
+   add  eax, ebx
+   mov sum1, eax
+   
+   mov ecx, 4
+   mov edx, 3
+   add ecx, edx
+   mov sum2, ecx
+   
+   mov eax, sum1
+   sub eax, sum2
+   call ExitProcess
+main endp
+end
