@@ -31,6 +31,9 @@
 code into machine code.
 5. Big endian is when the most significant bit is placed at the lowest address and little endian is when the least significant bit
 is placed at the lowest address. The terms come from a reference to a book by Jonathan titled Gulliver's Travels.
-6. 
+6. Because if you're using a constant you only have to change one instance of it and not a bunch of them scattered throughout the code.
+25. SDWORD.
+
 - [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
+4. 
 - [ ] 3.10 Programming Exercises, Pick any 1 exercise
