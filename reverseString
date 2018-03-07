@@ -1,0 +1,26 @@
+; Reverse String
+
+ExitProcess proto
+.data
+source BYTE "This is the source string",0
+target BYTE SIZEOF source DUP('#')
+
+.code
+main proc
+	mov esi, sizeof source
+	mov ecx, sizeof source
+	mov edx, 0
+	
+	Loop1:
+		mov al, [source + esi - 1]
+		mov [target + edx],al
+		inc edx
+		dec esi
+
+		;ecx is automatically decremented
+	loop Loop1
+	
+	mov edx,offset target
+   call ExitProcess
+main endp
+end
