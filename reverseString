@@ -7,17 +7,15 @@ target BYTE SIZEOF source DUP('#')
 
 .code
 main proc
-	mov esi, sizeof source
-	mov ecx, sizeof source
+	mov rcx, sizeof source ;rcx is your loop counter
 	mov edx, 0
 	
 	Loop1:
-		mov al, [source + esi - 1]
+		mov al, [source + rcx - 1] ;minus one so you don't get out-of-bounds
 		mov [target + edx],al
 		inc edx
-		dec esi
 
-		;ecx is automatically decremented
+		;rcx is automatically decremented
 	loop Loop1
 	
 	mov edx,offset target
