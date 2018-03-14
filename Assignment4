@@ -1,4 +1,22 @@
 - [ ] 4.2.8 Section Review, Questions 1, 2, 3, 4, 5, 6	
+1. inc val2
+2. sub eax, val3
+3. mov al, val2
+   sub val4, al
+4. CF = 0 SF = 1
+5. OF = 1 SF = 1
+6. a. CF = 1 SF = 0 ZF = 1 OF = 0
+   b. CF = 0 SF = 1 ZF = 0 OF = 0
+   c. CF = 0 SF = 1 ZF = 0 OF = 0
+   
 - [ ] 4.3.8 Section Review, Questions 1,2,3,4,5
+1. False
+2. False
+3. True
+4. False
+5. True
+
 - [ ] 4.4.5 Section Review, Questions 4,5
+4. True
+5. 
 - [ ] 4.10 Programming Exercises, Question 7
