@@ -1,2 +1,31 @@
 - [ ] 5.9 Programming Exercises, Questions 7, 10    (page 188)
 7. I generate a different number 100 times and display it to the screen each time.
+; AddTwoSum_64.asm - Chapter 3 example.
+
+ExitProcess proto
+Random64 proto
+WriteInt64 proto
+.data
+.code
+main proc
+   call Random64
+   
+   ;mods our random number in rax with 100 to get a loop counter between 0-100
+   xor rdx, rdx
+   mov rbx, rax
+   mov rsi, 100	
+   div rsi
+
+   mov rcx, rdx
+   
+   ;this loop outputs a random number on each pass
+   L1:
+   call Random64
+   call WriteInt64
+
+   loop L1
+   call ExitProcess
+main endp
+end
+
+10.
