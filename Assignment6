@@ -1,6 +1,5 @@
 - [ ] 5.9 Programming Exercises, Questions 7, 10    (page 188)
 7. I generate a different number 100 times and display it to the screen each time.
-; AddTwoSum_64.asm - Chapter 3 example.
 
 ExitProcess proto
 Random64 proto
