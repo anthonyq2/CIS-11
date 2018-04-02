@@ -28,3 +28,35 @@ main endp
 end
 
 10. Fibonacci
+ExitProcess proto
+
+.data
+counter QWORD 47
+fibArray DWORD 47 dup(?)
+.code
+main proc
+   mov rcx, counter
+   mov esi, 0
+   call calcFib
+   call ExitProcess
+main endp
+
+calcFib PROC
+mov eax, 0
+mov ebx, 1
+mov [fibArray+0],eax
+inc esi
+dec rcx
+mov [fibArray+1],ebx
+inc esi
+dec rcx
+L1:
+	add eax, ebx
+	mov edx, eax
+	mov [fibArray+esi], edx
+	mov ebx, edx
+	inc esi
+    loop L1
+ret
+calcFib ENDP
+end
