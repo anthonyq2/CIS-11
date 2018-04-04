@@ -29,10 +29,15 @@ end
 
 10. Fibonacci
 ExitProcess proto
+WriteInt64 proto
+Crlf proto
 
 .data
 counter QWORD 47
-fibArray DWORD 47 dup(?)
+fibArray QWORD 47 DUP (?)
+n QWORD 1
+nMinus1 QWORD 1
+nMinus2 QWORD 0
 .code
 main proc
    mov rcx, counter
@@ -42,20 +47,12 @@ main proc
 main endp
 
 calcFib PROC
-mov eax, 0
-mov ebx, 1
-mov [fibArray+0],eax
-inc esi
-dec rcx
-mov [fibArray+1],ebx
-inc esi
-dec rcx
+mov rax, nMinus2
+mov [fibArray + 0], rax
+call WriteInt64 
+call Crlf
 L1:
-	add eax, ebx
-	mov edx, eax
-	mov [fibArray+esi], edx
-	mov ebx, edx
-	inc esi
+
     loop L1
 ret
 calcFib ENDP
