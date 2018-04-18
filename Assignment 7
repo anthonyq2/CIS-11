@@ -5,10 +5,43 @@ PSEUDOCODE
   array2 = "option 2"
   etc.
   
-  mov rcx, offset array1
+//example of printing the menu options
+  mov rdx, offset array1
   call WriteString
   call crlf
+  etc.
+  
+//example of function displaying the name of the function you are in
+  PROC xANDy
+  var = "x and y"
+  mov rdx, offset var
+  call WriteString
+  ret
+  endp xANDy
+  
+  PROC xORy
+  etc.
 
+//get user input
+  answer BYTE "0"
+  mov rdx, offset answer
+  mov rcx, 2
+  call ReadString
+
+//vars for checking what they picked
+  possibleAnswer1 = "1"
+  PA2 = "2"
+  etc.
+  
+//then check against values
+  mov rsi, [answer]
+  mov rdi, [possibleAnswer1]
+  call Str_compare
+  jz Func1
+  mov rdi, [possibleAnswer2]
+  call Str_compare
+  jz Func2
+  
 - [ ] Upload your assignment to GitHub
 - [ ] Email james.wilson@rccd.edu with the url to the source code on GitHub	
 
