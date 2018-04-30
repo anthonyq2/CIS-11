@@ -1,0 +1,57 @@
+ExitProcess proto
+WriteInt64 proto
+Crlf proto
+
+.data
+myArray QWORD 1d,2d,3d,4d,5d,6d
+.code
+main proc
+	mov rcx, 6
+	L1:
+		mov rax, rbx
+		mov r12, 8
+		mul r12
+		mov r11, rax
+		mov rax, myArray[r11]
+		
+		call WriteInt64
+		inc rbx
+	loop L1
+
+	call Crlf
+
+	mov rcx, 6
+	mov rbx, 0
+	L2:
+		mov rax, rbx
+		mul r12
+		mov r11, rax ;r11 holds first index
+		mov rbp, r11
+		add rbp, 8   ;rbp holds second index
+		
+		mov r14, myArray[r11]
+		mov r15, myArray[rbp]
+
+		;here the values are swapped
+		mov myArray[r11], r15
+		mov myArray[rbp], r14
+	
+		add rbx, 2
+	loop L2
+	
+	mov rcx, 6
+	mov rbx, 0
+	L3:
+		mov rax, rbx
+		mov r12, 8
+		mul r12
+		mov r11, rax
+		mov rax, myArray[r11]
+		
+		call WriteInt64
+		inc rbx
+	loop L3
+
+	call ExitProcess
+main endp
+end
