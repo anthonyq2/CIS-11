@@ -1,1 +1,32 @@
 
+ExitProcess PROTO
+
+.data
+myArray    QWORD 10d,20d,30d,40d
+finalArray QWORD 4 DUP(0)
+.code
+main proc
+	mov rcx, 4 
+	mov rsi, 0
+	mov r15, 8 ;Used for array indexing
+
+	L1:
+		mov rax, rsi
+		mul r15
+		mov rdx, myArray[rax]
+
+		cmp rsi, 3
+		je FinalValue
+
+		mov finalArray[rax + 8], rdx
+		jmp EndLoop
+
+		FinalValue:
+			mov finalArray[0], rdx
+		EndLoop:
+			inc rsi
+	loop L1
+
+	call ExitProcess
+main endp
+end
