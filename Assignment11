@@ -7,6 +7,7 @@ myArray QWORD 1d,2d,3d,4d,5d,6d
 .code
 main proc
 	mov rcx, 6
+	mov rbx, 0
 	L1:
 		mov rax, rbx
 		mov r12, 8
