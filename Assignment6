@@ -27,32 +27,57 @@ main proc
 main endp
 end
 
+
 10. Fibonacci
 ExitProcess proto
 WriteInt64 proto
 Crlf proto
 
 .data
-counter QWORD 47
+counter QWORD 45
 fibArray QWORD 47 DUP (?)
 n QWORD 1
 nMinus1 QWORD 1
 nMinus2 QWORD 0
+
 .code
 main proc
    mov rcx, counter
-   mov esi, 0
    call calcFib
    call ExitProcess
 main endp
 
 calcFib PROC
-mov rax, nMinus2
-mov [fibArray + 0], rax
+mov rax, nMinus2				;forcing the first value of the sequence
+mov fibArray[0], rax
 call WriteInt64 
-call Crlf
-L1:
 
+mov rax, nMinus1				;forcing the second value of the sequence
+mov fibArray[8], rax
+call WriteInt64
+
+mov rsi, 2						;loop counter starts at 2 because we are starting at element 3
+mov r15, 8						;used for array indexing
+L1:
+	mov rbp, nMinus2
+	add rbp, nMinus1
+
+	mov rax, rsi
+	mul r15						;moves array value 8 bytes over
+	mov r11, rax
+
+	mov fibArray[r11], rbp		;puts n value into array position (rbp still holds n)
+	mov rax, fibArray[r11]		;r11 holds 'n' value of the sequence
+	mov n, rax
+	call WriteInt64
+
+	mov r9, nMinus1				
+	mov nMinus2, r9				;(n-2) becomes (n-1)
+		
+	mov r9, n				
+	mov nMinus1, r9				;(n-1) becomes n
+
+	inc rsi
     loop L1
 ret
 calcFib ENDP
