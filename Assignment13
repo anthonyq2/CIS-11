@@ -1,1 +1,57 @@
+ExitProcess proto
+WriteInt64 proto
+Crlf proto
 
+.data
+myArray qword 1, 9, 3, 4, 7, 2, 8, 6
+.code	
+main proc
+
+mov rcx, 8		;8 is static size of array
+mov rbx, 0		;loop index
+L1:				;loop1 is just printing unsorted array
+	mov rax, myArray[rbx * 8]
+
+	call WriteInt64
+	inc rbx
+loop L1
+
+call Crlf
+
+mov rcx, 7		;size of the array minus 1. I just hard coded it because the size does not change
+OUTERLOOP:
+	mov r15, rcx	
+	mov rbx, 0
+	L2:
+		mov r9, myArray[rbx * 8]
+		mov r11, rbx
+		inc r11
+		mov r10, myArray[r11 * 8]
+		cmp r9, r10
+		jle ENDLOOP
+
+		SWAP:
+			mov r13, r9
+			mov myArray[rbx * 8], r10
+			mov myArray[r11 * 8], r13
+
+		ENDLOOP:
+		inc rbx
+	loop L2
+	mov rcx, r15
+loop OUTERLOOP
+   
+mov rcx, 8	
+mov rbx, 0		
+L3:				;again we are just printing the array with this loop	
+	mov rax, myArray[rbx * 8]
+
+	call WriteInt64
+	inc rbx
+loop L3
+
+call Crlf
+   
+   call ExitProcess
+main endp
+end
