@@ -9,7 +9,7 @@ main proc
 
 mov rcx, 8		;8 is static size of array
 mov rbx, 0		;loop index
-L1:				;loop1 is just printing unsorted array
+L1:			;loop1 is just printing unsorted array
 	mov rax, myArray[rbx * 8]
 
 	call WriteInt64
@@ -43,7 +43,7 @@ loop OUTERLOOP
    
 mov rcx, 8	
 mov rbx, 0		
-L3:				;again we are just printing the array with this loop	
+L3:			;again we are just printing the array with this loop	
 	mov rax, myArray[rbx * 8]
 
 	call WriteInt64
