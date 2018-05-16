@@ -4,6 +4,7 @@ Briefly describe the concept of "Stack Frame" (1 through 5 points depending on q
 Briefly describe the concept of a "Calling Convention" (1 through 5 points depending on quality of the answer)
  ANSWER: A calling convention is essentially the description of how subroutines handle their calls. Calling conventions deal with where return values and return addresses are placed (registers/call stack/etc.), the order which arguments are passed, and how a return value is delivered back to the caller. 
 Why do the book examples always start functions with "push ebp" and "mov ebp,esp" (2 points)
+ ANSWER: It is the function prologue in the x86 architecture. This means that the stack is being prepared for use within the function. In this case, ebp (the base pointer) is pushed onto the stack so it can be restored later and then the value in esp (the stack pointer) is assigned to ebp so that this new stack frame will be placed on the old one.
 What is the x64 equivalent to "push ebp" and "mov ebp,esp)" (2 points)
 What are the differences between "Microsoft x64 calling convention" and "System V AMD64 ABI calling convention" (2 points)
 Hint: https://en.wikipedia.org/wiki/X86_calling_conventions
