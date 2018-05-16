@@ -1,7 +1,8 @@
- Briefly describe the concept of "Stack Frame" (1 through 5 points depending on quality of the answer)
-Hint: https://en.wikipedia.org/wiki/X86_calling_conventions
-
- Briefly describe the concept of a "Calling Convention" (1 through 5 points depending on quality of the answer)
+Briefly describe the concept of "Stack Frame" (1 through 5 points depending on quality of the answer)
+ ANSWER: The stack frame is the collection of all the data associated with one particular part of a program (usually a function call). The stack frame is responsible for tracking the return address of the function, any of the variables passed in the argument of the function, and the values of local variables. 
+ 
+Briefly describe the concept of a "Calling Convention" (1 through 5 points depending on quality of the answer)
+ ANSWER: A calling convention is essentially the description of how subroutines handle their calls. Calling conventions deal with where return values and return addresses are placed (registers/call stack/etc.), the order which arguments are passed, and how a return value is delivered back to the caller. 
  Why do the book examples always start functions with "push ebp" and "mov ebp,esp" (2 points)
  What is the x64 equivalent to "push ebp" and "mov ebp,esp)" (2 points)
  What are the differences between "Microsoft x64 calling convention" and "System V AMD64 ABI calling convention" (2 points)
