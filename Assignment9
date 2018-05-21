@@ -6,22 +6,19 @@ Briefly describe the concept of a "Calling Convention" (1 through 5 points depen
 Why do the book examples always start functions with "push ebp" and "mov ebp,esp" (2 points)
  ANSWER: It is the function prologue in the x86 architecture. This means that the stack is being prepared for use within the function. In this case, ebp (the base pointer) is pushed onto the stack so it can be restored later and then the value in esp (the stack pointer) is assigned to ebp so that this new stack frame will be placed on the old one.
 What is the x64 equivalent to "push ebp" and "mov ebp,esp)" (2 points)
+ ANSWER: The x64 equivalent would be: 
+         mov    [RSP + 8], RCX  
+         push   R15  
+         push   R14  
+         push   R13  
 What are the differences between "Microsoft x64 calling convention" and "System V AMD64 ABI calling convention" (2 points)
-Hint: https://en.wikipedia.org/wiki/X86_calling_conventions
+ ANSWER: The main difference between the two is that the AMD calling convention does not provide a shadow space for additional function arguments. Also, AMD provides a red-zone. This is a 128-byte sized space stored beneath the stack pointer of the function. x64 reserves 4 registers for passing numbers where others are pushed onto the stack whereas AMD reserves 6 registers and pushes the rest onto the stack.
 
 void myFunction(int a, int b, int c, int d, int e, int f)  {
   //some code here
 }
- Upon entry to myFunction (above), what does the stack look like when using Microsoft x64 calling convention? (3 points)
+Upon entry to myFunction (above), what does the stack look like when using Microsoft x64 calling convention? (3 points)
+ ANSWER:  a goes to rcx, b to rdx, c to r8, d to r9, and e and f are pushed onto the stack.
 
-Hint: https://docs.microsoft.com/en-us/cpp/build/parameter-passing
-
- Upon entry to myFunction (above), what does the stack look like when using stdcall convention (3 points)
-
-Hint: https://en.wikipedia.org/wiki/X86_calling_conventions
-
- Upload your assignment to GitHub
-
- Email james.wilson@rccd.edu with the url to the source code on GitHub
-
-*** 22 points ***
+Upon entry to myFunction (above), what does the stack look like when using stdcall convention (3 points)
+ ANSWER: The stack is going to hold all of the values. f is going to be pushed onto the stack first, then e, then d, etc.
